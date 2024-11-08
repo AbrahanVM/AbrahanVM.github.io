@@ -5,6 +5,7 @@
 
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width">
+ <link rel="stylesheet" href="estilos.css">
 
  <title>Chat</title>
 
@@ -20,15 +21,13 @@
 
   <p>
    <label>
-    Nombre *
-    <input id="inputAlias" required>
+    Nombre *<input id="inputAlias" required>
    </label>
   </p>
 
   <p>
    <label>
-    Mensaje *
-    <input id="inputMensaje" required>
+    Mensaje *<input id="inputMensaje" required>
    </label>
   </p>
 
@@ -48,10 +47,10 @@
   import { conexionMqttPerdida } from "./lib/js/conexionMqttPerdida.js"
   import { muestraError } from "./lib/js/muestraError.js"
 
-  const TOPICO_CHAT = "gilpgawoas/chat"
+  const TOPICO_CHAT = "PPC/chat"
 
   // Cambia por una raíz para tu proyecto.
-  const clientId = creaIdCliente("gilpgawoasChat-")
+  const clientId = creaIdCliente("PPCChat-")
 
   // Si usas un servidor de MQTT diferente, necesitas cambiar los parámetros.
   const cliente = new Paho.MQTT.Client("test.mosquitto.org", 8081, clientId)
